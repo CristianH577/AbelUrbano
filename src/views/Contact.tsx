@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="section px-4 font-[western] flex flex-col items-center break-all"
+      className="section px-4 font-[western] flex flex-col items-center max-xs:break-all"
     >
       <img
         src={logo}
@@ -55,7 +55,7 @@ export default function Contact() {
       <Link
         href={LINKS_SITES.wp + "&text=Hola. Quiero reservar un turno."}
         underline="hover"
-        className="text-5xl uppercase text-amber-400 mb-12 not-prose"
+        className="text-5xl uppercase text-amber-400 mb-12 not-prose text-center"
         title="Reservar turno"
         target="_blank"
         rel="noopener noreferrer"

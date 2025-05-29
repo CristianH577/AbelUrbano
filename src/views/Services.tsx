@@ -207,7 +207,8 @@ const prices = [
 //   },
 // ];
 
-const class_title = "uppercase font-[western] text-5xl break-all font-normal";
+const class_title =
+  "uppercase font-[western] text-5xl max-xs:break-all font-normal";
 const animation = {
   variants: {
     hidden: { opacity: 0, y: "50%" },
@@ -391,7 +392,7 @@ export default function Services() {
       </motion.article>
 
       <motion.article
-        className="text-center break-all md:place-self-center p-3 md:p-4"
+        className="text-center max-xs:break-all md:place-self-center p-3 md:p-4"
         {...animation}
       >
         <h1 className={class_title}>Limpieza facial</h1>
@@ -420,9 +421,9 @@ export default function Services() {
           ))}
         </div>
 
-        <h3 className="uppercase font-[western] font-normal text-2xl">
+        <h2 className="uppercase font-[western] font-normal text-2xl">
           *incluye diagnostico de piel y armado de rutina
-        </h3>
+        </h2>
 
         <i>*Los precios pueden variar.</i>
       </motion.article>
