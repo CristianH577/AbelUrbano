@@ -5,6 +5,8 @@ import { LINKS_SITES } from "../const/siteConfig";
 import { Link } from "@mui/material";
 
 import imgCourse from "../assets/imgs/curso.webp";
+import imgCourse360 from "../assets/imgs/curso-360.webp";
+import imgCourse640 from "../assets/imgs/curso-640.webp";
 
 export default function Course() {
   return (
@@ -16,8 +18,9 @@ export default function Course() {
         rel="noopener noreferrer"
       >
         <motion.img
-          src={imgCourse}
-          alt="promocion del curso"
+          src={imgCourse360}
+          srcSet={`${imgCourse360} 360w, ${imgCourse640} 640w, ${imgCourse} 730w, `}
+          alt="Promoción del curso"
           className="rounded-4xl place-self-center"
           initial={{ boxShadow: "0 0 60px rgba(255, 0, 0, 0.8)" }}
           animate={{

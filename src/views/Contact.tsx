@@ -16,6 +16,7 @@ const contacts = [
     title: "Ir a Whatsapp",
     icon: WhatsAppIcon,
     href: LINKS_SITES.wp,
+    iconColor: "text-emerald-400",
   },
   {
     id: "ig",
@@ -23,6 +24,7 @@ const contacts = [
     title: "Ir a Instagram",
     icon: InstagramIcon,
     href: LINKS_SITES.ig,
+    iconColor: "text-rose-400",
   },
   {
     id: "fb",
@@ -30,6 +32,7 @@ const contacts = [
     title: "Ir a Facebook",
     icon: FacebookIcon,
     href: LINKS_SITES.fb,
+    iconColor: "text-blue-400",
   },
   {
     id: "direcion",
@@ -37,6 +40,7 @@ const contacts = [
     title: "Ir a Google Maps",
     icon: MapIcon,
     href: LINKS_SITES.map,
+    iconColor: "text-red-400",
   },
 ];
 
@@ -69,7 +73,7 @@ export default function Contact() {
             key={article.id}
             className="inline-flex gap-2 text-4xl uppercase mb-0"
           >
-            <article.icon className="h-10 w-fit" />
+            <article.icon className={"h-10 w-fit " + article.iconColor} />
             <Link
               href={article.href}
               underline="hover"
