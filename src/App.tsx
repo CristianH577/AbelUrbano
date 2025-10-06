@@ -4,15 +4,15 @@ import Hero from "./views/Hero";
 import Course from "./views/Course";
 import NavbarCustom from "./views/NavbarCustom";
 import Products from "./views/Products";
-import Services from "./views/Services";
 import Contact from "./views/Contact";
+import Services from "./views/Services";
 
 export default function App() {
   return (
     <div className="relative bg-neutral-950 text-neutral-200 font-[roboto] prose prose-invert max-w-none pb-16">
       <NavbarCustom />
 
-      <main>
+      <main className="space-y-16">
         <Hero />
 
         <Services />

@@ -8,6 +8,7 @@ import MapIcon from "@mui/icons-material/Map";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 import logo from "../assets/imgs/logo.webp";
+import ButtonTurn from "../components/ButtonTurn";
 
 const contacts = [
   {
@@ -48,7 +49,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="section px-4 font-[western] flex flex-col items-center max-xs:break-all"
+      className="w-full max-w-[900px] place-self-center px-4 font-[western] flex flex-col gap-6 items-center max-xs:break-all"
     >
       <img
         src={logo}
@@ -56,7 +57,7 @@ export default function Contact() {
         className="not-prose drop-shadow-[2px_2px_4px_black]"
       />
 
-      <Link
+      {/* <Link
         href={LINKS_SITES.wp + "&text=Hola. Quiero reservar un turno."}
         underline="hover"
         className="text-5xl uppercase text-amber-400 mb-12 not-prose text-center"
@@ -65,7 +66,9 @@ export default function Contact() {
         rel="noopener noreferrer"
       >
         Reserva tu turno
-      </Link>
+      </Link> */}
+
+      <ButtonTurn />
 
       <article className="flex flex-col sm:flex-row flex-wrap gap-8 sm:items-center justify-center not-prose">
         {contacts.map((article) => (

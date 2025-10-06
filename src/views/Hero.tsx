@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import logo from "../assets/imgs/logo.webp";
+import ButtonTurn from "../components/ButtonTurn";
 
 export default function Hero() {
   return (
@@ -71,7 +72,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="z-10 text-4xl font-[western] font-normal text-neutral-300 flex gap-1 mt-12">
+      <div className="z-10 text-4xl font-[western] font-normal text-neutral-300 flex gap-1 my-12">
         {"Run  hippie,  run".split(" ").map((char, index) => (
           <motion.span
             key={index}
@@ -87,6 +88,19 @@ export default function Hero() {
           </motion.span>
         ))}
       </div>
+
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+        transition={{
+          delay: 3.2,
+          duration: 1,
+        }}
+      >
+        <ButtonTurn />
+      </motion.div>
     </motion.section>
   );
 }

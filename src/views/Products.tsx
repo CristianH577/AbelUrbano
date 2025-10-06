@@ -98,11 +98,10 @@ export default function Products() {
   }, []);
 
   return (
-    <section id="productos" className="section max-w-[900px]">
-      <div className="italic text-neutral-500 text-sm">
-        *Los precios pueden variar: 30/5/25
-      </div>
-
+    <section
+      id="productos"
+      className="w-full max-w-[900px] px-4 py-16 place-self-center"
+    >
       <h1 className="uppercase font-[western] text-6xl font-normal inline-flex gap-1 break-all">
         <StyleIcon className="h-14 w-fit" />
         Productos
@@ -166,32 +165,21 @@ export default function Products() {
                         {item.label}
                       </h2>
 
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        <p className="text-amber-400 drop-shadow drop-shadow-black">
-                          {Intl.NumberFormat("es-AR", {
-                            style: "currency",
-                            currency: "ARS",
-                            minimumFractionDigits: 0,
-                            maximumFractionDigits: 0,
-                          }).format(item.price ?? 0)}
-                        </p>
-
-                        <Button
-                          component="a"
-                          href={
-                            LINKS_SITES.wp +
-                            "&text=Hola. Me interesa: " +
-                            item.label
-                          }
-                          title="Pedir por whatsapp"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          variant="contained"
-                          className="bg-gradient-to-l from-amber-700 to-amber-500 px-0 min-w-12 rounded-full hover:bg-gradient-to-r"
-                        >
-                          <WhatsAppIcon />
-                        </Button>
-                      </div>
+                      <Button
+                        component="a"
+                        href={
+                          LINKS_SITES.wp +
+                          "&text=Hola. Me interesa: " +
+                          item.label
+                        }
+                        title="Pedir por whatsapp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="contained"
+                        className="bg-gradient-to-l from-amber-700 to-amber-500 px-0 min-w-12 rounded-full hover:bg-gradient-to-r"
+                      >
+                        <WhatsAppIcon />
+                      </Button>
                     </motion.div>
 
                     <motion.img

@@ -36,7 +36,7 @@ export default function NavbarCustom() {
             value={item.href}
             title={item.label}
             className={
-              "text-white drop-shadow-md drop-shadow-black" +
+              "text-white drop-shadow-md drop-shadow-black hover:text-amber-400" +
               (item.id === "course" ? " hidden sm:inline-flex" : "")
             }
             icon={<item.icon />}
